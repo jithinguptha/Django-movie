@@ -1,0 +1,15 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block content %}
+<div class="row m-5">
+    <div class="col-4">
+        <img src="{{k.image.url}}" width="240px" height="360px">
+    </div>
+    <div class="col-8">
+        <h4>{{k.title}}</h4>
+        <h5>{{k.director}}</h5>
+        <a href="{% url 'movie:update' k.id %}" class="btn btn-outline-success">Update</a>
+        <a href="{% url 'movie:delete' k.id %}" class="btn btn-outline-danger">Delete</a>
+    </div>
+</div>
+{% endblock %}

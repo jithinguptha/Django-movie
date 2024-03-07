@@ -1,0 +1,25 @@
+{% extends 'base1.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<!--<center>-->
+<!--    <form method="POST" enctype="multipart/form-data">-->
+<!--        {% csrf_token %}-->
+<!--<h2>Add Movie</h2>-->
+<!--    <table>-->
+<!--    {{form.as_table}}-->
+<!--        </table>-->
+<!--        <input type="submit" class="btn btn-outline-success mt-3" value="Submit">-->
+<!--    </form>-->
+<!--</center>-->
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form|crispy}}
+<!--    <table>-->
+<!--        {{form.as_table}}-->
+<!--    </table>-->
+    <input type="submit">
+</form>
+
+
+{% endblock %}
